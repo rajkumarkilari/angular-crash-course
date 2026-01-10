@@ -1,0 +1,82 @@
+:host {
+  display: block;
+  padding: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  color: #222;
+  background: #fff;
+}
+
+/* Button */
+button {
+  background: #0b5ed7;
+  color: #fff;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Table wrapper for horizontal scroll on small screens */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px; /* allow scroll on small screens */
+  background: #fff;
+  font-size: 14px;
+}
+th,
+td {
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid #e6e9ee;
+  vertical-align: top;
+}
+thead th {
+  background: #f5f7fb;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Zebra rows */
+tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+/* ID cell: allow long strings to wrap */
+.id-cell {
+  word-break: break-all;
+  max-width: 220px;
+}
+
+/* Messages */
+.loading {
+  margin-top: 8px;
+  color: #555;
+}
+.error {
+  margin-top: 8px;
+  color: #b00020;
+}
+
+/* Small screens: allow horizontal scroll instead of complex reflow */
+@media (max-width: 700px) {
+  :host {
+    padding: 12px;
+  }
+  table {
+    font-size: 13px;
+    min-width: 700px;
+  }
+}

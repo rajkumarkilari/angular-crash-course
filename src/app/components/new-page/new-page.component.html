@@ -1,0 +1,37 @@
+<!-- table for records -->
+<button (click)="fetchData()" [disabled]="loading">Load data</button>
+
+<div *ngIf="loading">Loading…</div>
+<div *ngIf="error">Error: {{ error?.message || error }}</div>
+
+<table *ngIf="data?.length" border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>cash_amount</th>
+      <th>currency</th>
+      <th>dividend_type</th>
+      <th>ex_dividend_date</th>
+      <th>frequency</th>
+      <th>id</th>
+      <th>pay_date</th>
+      <th>record_date</th>
+      <th>ticker</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>{{ item.cash_amount }}</td>
+      <td>{{ item.currency }}</td>
+      <td>{{ item.dividend_type }}</td>
+      <td>{{ item.ex_dividend_date }}</td>
+      <td>{{ item.frequency }}</td>
+      <td style="word-break: break-all">{{ item.id }}</td>
+      <td>{{ item.pay_date }}</td>
+      <td>{{ item.record_date }}</td>
+      <td>{{ item.ticker }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="data && !data.length">No records found.</div>
+<div *ngIf="!data && !loading">Click "Load data" to fetch records.</div>
