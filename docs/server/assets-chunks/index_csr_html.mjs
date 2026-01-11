@@ -1,0 +1,14 @@
+export default `<!DOCTYPE html>
+<html lang="en" data-beasties-container="">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularCrashCourse</title>
+    <base href="angular-crash-course">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles-5INURTSO.css"></head>
+  <body ngcm="">
+    <app-root></app-root>
+  <link rel="modulepreload" href="chunk-4OOZJU2C.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-ZHU4H4U4.js" type="module"></script></body>
+</html>
+`;
